@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import { Suspense } from 'react';
+import { Route, Router, Switch } from 'react-router-dom';
 import './App.css';
+import MainPage from './components/MainPage';
+import history from './history';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense
+    //  fallback={<Loading />}
+    >
+      <Router history={history}>
+        <Switch>
+          <Route path="/" exact component={MainPage} />
+          <Route path="/github-issues-app" exact component={MainPage} />
+        </Switch>
+      </Router>
+    </Suspense>
   );
 }
 

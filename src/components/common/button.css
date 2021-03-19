@@ -1,0 +1,44 @@
+.btn__group {
+  box-shadow: 0 5px 5px -6px black;
+}
+
+.btn__group button {
+  border: 1px solid #fafbfc; /* Green border */
+  padding: 2px 10px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  height: 100%;
+  float: left; /* Float the buttons side by side */
+}
+
+/* Clear floats (clearfix hack) */
+.btn__group:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.btn__group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+/* .btn__group button:hover {
+  background-color: #3e8e41;
+} */
+
+.left__button {
+  border-radius: 6px 0px 0px 6px;
+}
+
+.left__button:hover {
+  background: #e8eaec;
+}
+
+.right__button {
+  border-radius: 0px 6px 6px 0px;
+  background: #fff;
+}
+
+.right__button:hover {
+  color: #0366d6;
+}

@@ -1,0 +1,33 @@
+.filters__conatiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.search__container {
+  width: 65%;
+}
+
+.right__buttons_container {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1090px) {
+  .filters__conatiner {
+    flex-flow: column;
+  }
+
+  .search__container {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .right__buttons_container {
+    width: 100%;
+    text-align: center;
+  }
+}

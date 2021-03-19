@@ -1,0 +1,10 @@
+.nav__container {
+  background: #24292e;
+  width: 100%;
+  padding: 16px;
+  line-height: 1.5;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

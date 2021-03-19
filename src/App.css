@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main__section__container {
+  margin: 40px auto;
+  width: 80%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.issue {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px;
+  border: 1px solid #e1e4e8;
+}
+
+.issue:hover,
+.issue:focus {
+  background-color: #f6f8fa;
+}
+
+.issue > div {
+  padding: 0 5px;
+}
+
+.issue__details {
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.issue__details__meta {
+  font-size: 12px;
+  font-weight: 500;
+  color: #586069;
+  padding-right: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.issue__details__meta > div {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.issue__details__title {
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.issue__details__title--text {
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.label {
+  padding: 3px 5px;
+  font-size: 12px;
+  border-radius: 2px;
+  margin-right: 10px;
+  white-space: nowrap;
+  height: 23px;
+}
+
+.issue__comments {
+  min-width: 50px;
+}
+
+.issue__comments__counter {
+  display: flex;
+  font-size: 12px;
+  font-weight: 500;
+  color: #586069;
+}
+
+.issue__comments__counter > div {
+  padding-left: 5px;
+}
+
+.issue__assignees {
+  position: relative;
+}
+
+.assignee {
+  position: absolute;
+  left: -24px;
+}
+
+.assignee img {
+  border-radius: 2px;
+}
+
+.assignee--0 {
+  z-index: 3;
+}
+.assignee--1 {
+  z-index: 2;
+  transform: translateX(3px) translateY(3px);
+}
+.assignee--2 {
+  z-index: 1;
+  transform: translateX(6px) translateY(6px);
+}
+
+@media screen and (max-width: 960px) {
+  .issue__details__title--text {
+    margin-right: 0;
+    flex: 1 1 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .label {
+    margin: 5px 5px 0 0;
+  }
+  .label:first-child {
+    margin-top: 10px;
   }
 }
