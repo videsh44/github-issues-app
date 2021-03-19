@@ -24,15 +24,11 @@ const BreadCrumbs = () => {
   return (
     <div className="breadcrumbs__container">
       <Breadcrumbs aria-label="breadcrumb">
-        <Link color="inherit" href="/" className={classes.link}>
+        <Link color="inherit" className={classes.link}>
           <CardMembershipOutlinedIcon className={classes.icon} />
           facebook
         </Link>
-        <Link
-          color="inherit"
-          href="/getting-started/installation/"
-          className={classes.link}
-        >
+        <Link color="inherit" className={classes.link}>
           create-react-app
         </Link>
       </Breadcrumbs>

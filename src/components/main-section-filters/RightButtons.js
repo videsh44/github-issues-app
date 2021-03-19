@@ -35,7 +35,7 @@ const RightButtons = () => {
           </Button>
         </ButtonGroup>
       </div>
-      <div>
+      <div className="add_new_button">
         <Button className={classes.add_new} variant="contained">
           New
         </Button>

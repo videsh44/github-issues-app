@@ -30,4 +30,8 @@
     width: 100%;
     text-align: center;
   }
+
+  .add_new_button {
+    display: none;
+  }
 }
