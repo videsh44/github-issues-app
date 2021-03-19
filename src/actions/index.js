@@ -1,8 +1,14 @@
 import github from '../api/github';
 
-export const getData = () => async (dispatch) => {
+export const getData = (per_page, page) => async (dispatch) => {
   const response = await github().get(
-    '/repos/facebook/create-react-app/issues'
+    '/repos/facebook/create-react-app/issues',
+    {
+      params: {
+        per_page,
+        page,
+      },
+    }
   );
 
   const { data } = response;

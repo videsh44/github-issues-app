@@ -1,5 +1,5 @@
 const initialState = {
-  githubData: null,
+  githubData: [],
   loading: true,
 };
 
@@ -8,7 +8,7 @@ const github = (state = initialState, action) => {
     case 'GET_GITHUB_DATA':
       return {
         ...state,
-        githubData: action.payload,
+        githubData: [...state.githubData, ...action.payload],
         loading: false,
       };
     default:

@@ -27,7 +27,9 @@ const Issue = (props) => {
       <div className="issue__details">
         <div className="issue__details__title">
           <div className="issue__details__title--text">{props.title}</div>
-          <Labels labels={props.labels} />
+          {props.labels && props.labels.length !== 0 && (
+            <Labels labels={props.labels} />
+          )}
         </div>
         <div className="issue__details__meta">
           <div>#{props.number}</div>
