@@ -35,7 +35,7 @@ const IssuesContainer = () => {
         <InfiniteScroll
           dataLength={githubData.length} //This is important field to render the next data
           next={fetchData}
-          hasMore={true}
+          hasMore={page < 36 ? true : false}
           loader={<h4>Loading...</h4>}
           endMessage={
             <p style={{ textAlign: 'center' }}>
