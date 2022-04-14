@@ -19,6 +19,7 @@ const Labels = ({ labels }) => {
   return labels.map((item) => (
     <Chip
       key={item.node_id}
+      style={{ marginLeft: '8px' }}
       label={item.name}
       color={renderColorStyle(item.id)}
       component="a"
